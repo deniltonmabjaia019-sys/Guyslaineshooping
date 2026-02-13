@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Guys buy</title>
+</head>
+<body>
+
+<h1>Guyslaine Shopping</h1>
+  <h2>BEM-VINDO(a)!</h2>
+
+<div class="produto">
+<h3>Camiseta</h3>
+<p>R$ 50</p>
+<button onclick="add('Camiseta',50)">Comprar</button>
+</div>
+
+<div class="produto">
+<h3>Sapatilhas</h3>
+<p>R$ 120</p>
+<button onclick="add('Sapatilhas',120)">Comprar</button>
+</div>
+
+<div class="Camisola">
+<h3>Camisola</h3>
+  <p>R$ 150</p>
+  <button onclick="add('Camisola',150)">Comprar</button>
+<div id="lista"></div>
+<p>Total: R$ <span id="total">0</span></p>
+</div>
+
+<script>
+let total = 0;
+
+function add(nome, preco){
+  document.getElementById("lista").innerHTML += nome + " - R$ " + preco + "<br>";
+  total += preco;
+  document.getElementById("total").innerText = total;
+}
+</script>
+
+</body>
+</html>
+
+
